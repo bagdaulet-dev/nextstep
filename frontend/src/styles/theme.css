@@ -1,0 +1,172 @@
+.hero-copy h1,
+.view-heading h1 {
+  color: #1d1d1f;
+}
+.panel-heading h2 {
+  color: #3d3d44;
+}
+.company-cell strong {
+  color: #36363e;
+  font-size: 13px;
+}
+.company-cell small {
+  color: #68686f;
+  font-size: 11px;
+}
+.application-table th {
+  font-size: 10px;
+  color: #66666e;
+}
+.date-text {
+  font-size: 11px;
+  color: #68686f;
+}
+.nav-item {
+  font-size: 13px;
+}
+.nav-item.active {
+  background: #eae9ef;
+  color: #414049;
+}
+.nav-item.active svg {
+  color: #68627d;
+}
+.stage-nav {
+  font-size: 12px;
+}
+.topbar-search {
+  font-size: 11px;
+}
+.breadcrumbs {
+  font-size: 12px;
+}
+.panel-heading p {
+  font-size: 11px;
+}
+.summary-strip > button > span {
+  font-size: 11px;
+}
+.summary-strip > button small {
+  font-size: 10px;
+}
+.status-select-wrap select {
+  font-size: 10px;
+  padding: 5px 8px 5px 0;
+}
+.status-select-wrap {
+  background: #f0eff4;
+  color: #686570;
+}
+.status-select-wrap.interview {
+  background: #f0ebf8;
+  color: #785c97;
+}
+.status-select-wrap.offer {
+  background: #e8f1eb;
+  color: #437159;
+}
+.status-select-wrap.rejected {
+  background: #f6e9ed;
+  color: #925368;
+}
+.company-color-0 {
+  background: #eeeaf7;
+  color: #6e6082;
+}
+.company-color-1 {
+  background: #f4e7e8;
+  color: #7c5f68;
+}
+.company-color-2 {
+  background: #e8edf7;
+  color: #5c687a;
+}
+.company-color-3 {
+  background: #e8f0eb;
+  color: #566b5d;
+}
+.company-color-4 {
+  background: #f0ebe3;
+  color: #726651;
+}
+.company-color-5 {
+  background: #eeebf4;
+  color: #6c627c;
+}
+.stage-dot.interview,
+.metric-dot.violet,
+.status-dot.interview {
+  background: #b3a2d0;
+}
+.stage-dot.offer,
+.metric-dot.green,
+.status-dot.offer {
+  background: #9cb8a9;
+}
+.chart-bar {
+  fill: #dcd8ed;
+}
+.chart-bar.current {
+  fill: #ada3cd;
+}
+.chart-label,
+.chart-value {
+  fill: #686371;
+}
+.followup-list strong {
+  font-size: 12px;
+  color: #68636e;
+}
+.followup-list small {
+  font-size: 10px;
+  color: #6b656e;
+}
+.activity-panel .panel-heading > span {
+  font-size: 10px;
+}
+.activity-panel > p {
+  font-size: 10px;
+}
+.application-filter-tabs > button {
+  font-size: 12px;
+}
+.collection-toolbar input {
+  font-size: 12px;
+}
+.toolbar-select > select,
+.sort-select {
+  font-size: 11px;
+}
+.collection-panel .company-cell strong {
+  font-size: 13px;
+}
+.collection-panel .company-cell small {
+  font-size: 11px;
+}
+.collection-panel .status-select-wrap select {
+  font-size: 10px;
+}
+.pagination {
+  font-size: 11px;
+}
+.workspace-footer {
+  font-size: 10px;
+}
+.distribution-fill {
+  fill: #cbc3de;
+}
+.distribution-fill.interview {
+  fill: #c3aedb;
+}
+.distribution-fill.offer {
+  fill: #a2bda9;
+}
+.distribution-fill.rejected {
+  fill: #d7b1be;
+}
+.distribution-row > div {
+  font-size: 12px;
+}
+.distribution-row strong {
+  color: #6d6577;
+}
