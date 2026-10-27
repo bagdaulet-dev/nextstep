@@ -1,0 +1,27 @@
+# Local secrets and user data
+.env
+.env.*
+!.env.example
+.local/
+.local-work/
+.venv/
+*.sqlite3
+*.sqlite3-*
+*.pem
+*.key
+# Generated dependencies and artifacts
+node_modules/
+frontend/dist/
+backend/staticfiles/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+.ruff_cache/
+.DS_Store
+*.log
+
+# Local implementation notes
+tasks/
