@@ -1,0 +1,63 @@
+name: nextstep
+services:
+  db:
+    image: mysql:8.4
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-nextstep}
+      MYSQL_USER: ${MYSQL_USER:-nextstep}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:?Run python3 scripts/setup-env.py first}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:?Run python3 scripts/setup-env.py first}
+    volumes:
+      - mysql-data:/var/lib/mysql
+    command:
+      [
+        "--character-set-server=utf8mb4",
+        "--collation-server=utf8mb4_0900_ai_ci",
+        "--innodb-buffer-pool-size=128M",
+        "--max-connections=50",
+      ]
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          'MYSQL_PWD="$$MYSQL_PASSWORD" mysql --protocol=TCP -h 127.0.0.1 -u "$$MYSQL_USER" "$$MYSQL_DATABASE" -e "SELECT 1" >/dev/null 2>&1',
+        ]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+    mem_limit: 512m
+    restart: unless-stopped
+  app:
+    build: .
+    environment:
+      APP_MODE: mysql
+      DJANGO_DEBUG: ${DJANGO_DEBUG:-false}
+      DJANGO_SECRET_KEY: ${DJANGO_SECRET_KEY:?Run python3 scripts/setup-env.py first}
+      DJANGO_ALLOWED_HOSTS: ${DJANGO_ALLOWED_HOSTS:-localhost,127.0.0.1,[::1]}
+      DJANGO_CSRF_TRUSTED_ORIGINS: ${DJANGO_CSRF_TRUSTED_ORIGINS:-}
+      DJANGO_SECURE_COOKIES: ${DJANGO_SECURE_COOKIES:-true}
+      DJANGO_SSL_REDIRECT: ${DJANGO_SSL_REDIRECT:-true}
+      TRUST_PROXY: ${TRUST_PROXY:-false}
+      DEMO_ENABLED: ${DEMO_ENABLED:-false}
+      API_DOCS_ENABLED: ${API_DOCS_ENABLED:-false}
+      APP_TIME_ZONE: ${APP_TIME_ZONE:-Asia/Almaty}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-nextstep}
+      MYSQL_USER: ${MYSQL_USER:-nextstep}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:?Run python3 scripts/setup-env.py first}
+      MYSQL_HOST: db
+      MYSQL_PORT: 3306
+    ports:
+      - "127.0.0.1:${APP_PORT:-8002}:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+    read_only: true
+    tmpfs:
+      - /tmp:size=64m,mode=1777
+      - /app/.local:uid=10001,gid=10001,size=32m
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    mem_limit: 384m
+    restart: unless-stopped
+volumes:
+  mysql-data:
