@@ -62,7 +62,11 @@ jobs:
           API_DOCS_ENABLED: "false"
       - run: npm audit --audit-level=high
       - run: pip-audit -r backend/requirements.txt --no-deps --disable-pip
-      - run: npx --no-install playwright install --with-deps chromium
+      # Hosted Ubuntu 24.04 already has the browser libraries. Avoid repeating
+      # apt font downloads, which can stall on an external Ubuntu mirror.
+      - name: Install pinned Chromium
+        run: npx --no-install playwright install chromium
+        timeout-minutes: 5
       - name: Browser journey
         run: |
           python backend/manage.py migrate --noinput
