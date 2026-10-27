@@ -1,0 +1,515 @@
+.dialog {
+  border: 1px solid #ffffffb3;
+  border-radius: 22px;
+  background: #fdfdfddf;
+  backdrop-filter: blur(28px);
+  color: #38383f;
+  padding: 29px;
+  width: min(540px, calc(100% - 32px));
+  box-shadow:
+    0 25px 100px #24242426,
+    0 0 1px #41414129;
+  max-height: calc(100dvh - 42px);
+  overflow: auto;
+  overscroll-behavior: contain;
+  animation: dialog-in 0.2s ease-out;
+}
+.dialog::backdrop {
+  background: #25252535;
+  backdrop-filter: blur(5px);
+}
+.dialog-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 9px;
+}
+.dialog-heading h2 {
+  font-size: 25px;
+  font-weight: 570;
+  letter-spacing: -0.85px;
+  margin: 0;
+  color: #38383f;
+}
+.close-button {
+  margin-right: -6px;
+  color: #67676e;
+  background: #f2f2f2;
+}
+.dialog-subtitle {
+  font-size: 12px;
+  color: #65656f;
+  margin: 0 0 25px;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 16px;
+}
+.form-wide {
+  grid-column: 1/-1;
+}
+.dialog label {
+  font-size: 11px;
+  font-weight: 500;
+  color: #65656f;
+  display: block;
+}
+.dialog label > span {
+  font-size: 9px;
+  font-weight: 400;
+  color: #67676e;
+  margin-left: 5px;
+}
+.dialog input,
+.dialog select,
+.dialog textarea {
+  display: block;
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #e7e7e7;
+  border-radius: 9px;
+  background: #fefefef0;
+  color: #38383f;
+  font-size: 12px;
+  line-height: 1.5;
+  margin-top: 7px;
+}
+.dialog input::placeholder,
+.dialog textarea::placeholder {
+  color: #67676e;
+}
+.dialog textarea {
+  resize: vertical;
+  min-height: 90px;
+  max-height: 260px;
+}
+.dialog input[type="date"] {
+  color: #65656f;
+  min-height: 42px;
+}
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  margin-top: 27px;
+  padding-top: 20px;
+  border-top: 1px solid #eaeaea;
+}
+.dialog-actions .button {
+  font-size: 11px;
+  padding: 10px 15px;
+}
+.details-drawer {
+  position: fixed;
+  inset: 0 0 0 auto;
+  height: 100dvh;
+  max-height: 100dvh;
+  border-radius: 0;
+  width: min(460px, 100%);
+  max-width: 100%;
+  margin: 0;
+  padding: 25px 29px;
+  display: flex;
+  flex-direction: column;
+  border: 0;
+  border-left: 1px solid #fff;
+  animation: drawer-in 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.details-drawer:not([open]) {
+  display: none;
+}
+.details-drawer .dialog-heading {
+  margin-bottom: 28px;
+}
+.details-drawer .dialog-heading h2 {
+  font-size: 13px;
+  color: #67676e;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+.detail-identity .company-mark {
+  margin-bottom: 19px;
+}
+.detail-company {
+  display: block;
+  color: #67676e;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+.detail-identity h3 {
+  font-size: 27px;
+  font-weight: 550;
+  line-height: 1.25;
+  color: #38383f;
+  letter-spacing: -0.7px;
+  margin: 0 0 14px;
+  overflow-wrap: anywhere;
+}
+.detail-identity > p {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  color: #67676e;
+  font-size: 11px;
+  flex-wrap: wrap;
+  margin: 0 0 16px;
+}
+.detail-identity > p > span {
+  height: 3px;
+  width: 3px;
+  border-radius: 50%;
+  background: #d3d3d3;
+  margin: 0 2px;
+}
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 6px;
+  padding: 5px 8px;
+  font-size: 10px;
+  background: #eeeeee;
+  color: #67676e;
+}
+.status-badge > span {
+  height: 4px;
+  width: 4px;
+  background: currentColor;
+  border-radius: 50%;
+}
+.status-badge.interview {
+  background: #efefef;
+  color: #67676e;
+}
+.status-badge.offer {
+  background: #eaeaea;
+  color: #65656f;
+}
+.status-badge.rejected {
+  background: #ededed;
+  color: #67676e;
+}
+.detail-tabs {
+  display: flex;
+  gap: 25px;
+  border-bottom: 1px solid #e9e9e9;
+  margin-top: 29px;
+}
+.detail-tabs > button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  padding: 12px 0;
+  color: #67676e;
+  font-size: 11px;
+  border-bottom: 2px solid transparent;
+}
+.detail-tabs > button.selected {
+  color: #65656f;
+  border-color: #b7b7b7;
+}
+.detail-tabs > button > span {
+  font-size: 9px;
+  background: #eeeeee;
+  padding: 0 5px;
+  border-radius: 4px;
+  color: #67676e;
+}
+.detail-content {
+  padding-top: 25px;
+}
+.detail-status-label > select {
+  max-width: 100%;
+  font-size: 12px;
+}
+.detail-dates {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 24px 0 28px;
+}
+.detail-dates > div {
+  display: flex;
+  gap: 8px;
+  align-items: start;
+  color: #67676e;
+}
+.detail-dates > div > span {
+  font-size: 9px;
+  line-height: 1.5;
+  color: #67676e;
+}
+.detail-dates strong {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  color: #67676e;
+  margin-top: 5px;
+}
+.detail-note h4 {
+  font-size: 11px;
+  font-weight: 550;
+  color: #67676e;
+  margin: 0 0 11px;
+}
+.detail-note p {
+  font-size: 12px;
+  color: #67676e;
+  line-height: 1.9;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.job-link {
+  margin-top: 18px;
+  font-size: 10px;
+}
+.drawer-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 22px;
+  border-top: 1px solid #e6e6e6;
+  margin-top: auto;
+  flex-shrink: 0;
+}
+.drawer-footer > .button {
+  font-size: 11px;
+}
+.danger-quiet {
+  color: #65656f;
+}
+.danger-quiet:hover {
+  color: #38383f;
+  background: #efefef;
+}
+.history-list {
+  padding: 23px 0;
+  flex: 1;
+}
+.history-event {
+  display: flex;
+  align-items: start;
+  gap: 10px;
+  position: relative;
+  padding: 0 0 26px;
+}
+.history-event:not(:last-of-type):before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  top: 11px;
+  left: 3px;
+  height: calc(100% - 5px);
+  background: #e6e6e6;
+}
+.history-dot {
+  height: 7px;
+  width: 7px;
+  background: #cccccc;
+  border-radius: 50%;
+  margin-top: 5px;
+  position: relative;
+  z-index: 1;
+}
+.history-dot.offer {
+  background: #adadad;
+}
+.history-dot.rejected {
+  background: #bbbbbb;
+}
+.history-event > div {
+  display: grid;
+  gap: 5px;
+}
+.history-event strong {
+  font-size: 11px;
+  color: #67676e;
+  font-weight: 500;
+}
+.history-event time {
+  font-size: 9px;
+  color: #67676e;
+}
+.history-event > svg {
+  margin-left: auto;
+  color: #67676e;
+  margin-top: 3px;
+}
+.history-note {
+  font-size: 10px;
+  color: #67676e;
+  line-height: 1.8;
+}
+.confirm-dialog > p {
+  font-size: 13px;
+  line-height: 1.9;
+  color: #65656f;
+  margin: 20px 0;
+}
+.confirm-dialog strong {
+  font-weight: 550;
+}
+.account-profile {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-top: 25px;
+}
+.account-profile > div {
+  display: grid;
+  gap: 5px;
+  min-width: 0;
+}
+.account-profile strong {
+  font-size: 15px;
+  color: #65656f;
+  font-weight: 550;
+  overflow-wrap: anywhere;
+}
+.account-profile > div > span {
+  font-size: 11px;
+  color: #67676e;
+  overflow-wrap: anywhere;
+}
+.privacy-callout {
+  display: flex;
+  align-items: start;
+  gap: 9px;
+  background: #f4f4f4d9;
+  border: 1px solid #e8e8e8;
+  border-radius: 11px;
+  padding: 14px;
+  margin: 25px 0;
+  color: #67676e;
+}
+.privacy-callout > svg {
+  margin-top: 2px;
+}
+.privacy-callout > p {
+  font-size: 11px;
+  color: #67676e;
+  line-height: 1.8;
+  margin: 0;
+}
+.account-options {
+  display: grid;
+  gap: 3px;
+}
+.account-options > button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 17px 2px;
+  background: transparent;
+  border-bottom: 1px solid #ececec;
+  color: #67676e;
+  text-align: left;
+}
+.account-options > button:last-child {
+  border: 0;
+}
+.account-options > button > span {
+  display: grid;
+  gap: 4px;
+}
+.account-options strong {
+  font-size: 12px;
+  font-weight: 500;
+  color: #67676e;
+}
+.account-options small {
+  font-size: 10px;
+  color: #67676e;
+}
+.account-options .danger-quiet strong {
+  color: #67676e;
+}
+.account-delete-form {
+  padding-top: 12px;
+}
+.account-delete-form h3 {
+  font-size: 18px;
+  letter-spacing: -0.4px;
+  color: #65656f;
+  font-weight: 550;
+}
+.account-delete-form > p {
+  font-size: 12px;
+  line-height: 1.8;
+  color: #67676e;
+}
+.account-delete-form label {
+  margin: 17px 0;
+}
+@keyframes dialog-in {
+  from {
+    opacity: 0;
+    transform: translateY(7px) scale(0.99);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes drawer-in {
+  from {
+    opacity: 0.6;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.status-badge.interview {
+  background: #f0eafa;
+  color: #7a5b9b;
+}
+.status-badge.offer {
+  background: #e7f1ea;
+  color: #457159;
+}
+.status-badge.rejected {
+  background: #f6e8ed;
+  color: #925469;
+}
+.danger-quiet {
+  color: #95546a;
+}
+.danger-quiet:hover {
+  color: #96394f;
+  background: #f8eaf0;
+}
+.account-options .danger-quiet strong {
+  color: #95546a;
+}
+.privacy-callout {
+  background: #f4f3f8;
+}
+.detail-identity h3 {
+  color: #35353d;
+}
+.dialog-heading h2 {
+  color: #36363f;
+}
+.detail-note p {
+  color: #67676e;
+}
+.history-event strong {
+  color: #6b6574;
+}
+.history-dot {
+  background: #b9accb;
+}
+.history-dot.offer {
+  background: #a2b9a9;
+}
+.history-dot.rejected {
+  background: #d2adbc;
+}
