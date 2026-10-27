@@ -1,0 +1,141 @@
+@media (max-width: 359px) {
+  .sidebar {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+  .workspace-content {
+    padding: 0 17px;
+  }
+  .workspace-topbar {
+    padding: 0 17px;
+  }
+  .breadcrumbs {
+    gap: 5px;
+    font-size: 9px;
+  }
+  .topbar-actions {
+    gap: 7px;
+  }
+  .topbar-add {
+    font-size: 9px;
+    padding: 9px;
+  }
+  .hero-copy h1 {
+    font-size: 42px;
+  }
+  .overview-hero > .orbit-scene {
+    height: 220px;
+  }
+  .glass-label {
+    padding: 7px 8px;
+  }
+  .glass-label strong {
+    font-size: 10px;
+  }
+  .glass-label > div > span {
+    font-size: 7px;
+  }
+  .glass-label-top {
+    right: -4px;
+  }
+  .glass-label-bottom {
+    left: -4px;
+  }
+  .mini-icon {
+    width: 23px;
+    height: 23px;
+    border-radius: 7px;
+  }
+  .orbit-ring {
+    width: 231px;
+    height: 231px;
+  }
+  .ring-front {
+    width: 195px;
+    height: 195px;
+  }
+  .summary-strip > button > span {
+    font-size: 10px;
+  }
+  .summary-strip > button small {
+    font-size: 9px;
+  }
+  .company-cell small,
+  .collection-panel .company-cell small {
+    max-width: 112px;
+  }
+  .company-cell {
+    gap: 7px;
+  }
+  .company-cell strong,
+  .collection-panel .company-cell strong {
+    font-size: 11px;
+  }
+  .company-mark {
+    width: 25px;
+    height: 26px;
+    font-size: 11px;
+  }
+  .status-select-wrap {
+    gap: 3px;
+    padding-left: 5px;
+  }
+  .status-select-wrap select,
+  .collection-panel .status-select-wrap select {
+    font-size: 8px;
+  }
+  .application-table th:first-child,
+  .application-table td:first-child {
+    padding-left: 12px;
+  }
+  .application-table td:last-child {
+    padding-right: 5px;
+  }
+  .collection-count {
+    display: none;
+  }
+  .view-heading h1 {
+    font-size: 31px;
+  }
+  .followup-list {
+    grid-template-columns: 1fr;
+  }
+  .followup-list > button {
+    padding: 11px 0;
+  }
+  .followup-list > button:nth-last-child(2) {
+    border-bottom: 1px solid #eee;
+  }
+  .followup-list > button > svg {
+    display: block;
+  }
+  .followup-list strong {
+    font-size: 12px;
+  }
+  .followup-list small {
+    font-size: 10px;
+  }
+  .followup-list .company-mark {
+    width: 29px;
+    height: 29px;
+  }
+  .auth-main {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  .auth-card {
+    padding: 25px 20px;
+  }
+  .dialog-actions .button {
+    font-size: 10px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

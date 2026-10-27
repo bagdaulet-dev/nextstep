@@ -1,0 +1,86 @@
+name: Verify Nextstep
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_call:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    services:
+      mysql:
+        image: mysql:8.4
+        env:
+          MYSQL_ROOT_PASSWORD: nextstep-ci-ephemeral-only
+          MYSQL_ROOT_HOST: "%"
+          MYSQL_DATABASE: nextstep
+        ports: ["3306:3306"]
+        options: >-
+          --health-cmd="mysqladmin ping -h 127.0.0.1 --silent"
+          --health-interval=5s --health-timeout=5s --health-retries=30
+    env:
+      APP_MODE: preview
+      DJANGO_DEBUG: "true"
+      MYSQL_DATABASE: nextstep
+      MYSQL_USER: root
+      MYSQL_PASSWORD: nextstep-ci-ephemeral-only
+      MYSQL_HOST: 127.0.0.1
+      MYSQL_PORT: "3306"
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: backend/requirements-dev.txt
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: "24"
+          cache: npm
+      - run: pip install -r backend/requirements-dev.txt
+      - run: npm install --global npm@11.19.0 --ignore-scripts
+      - run: npm ci --ignore-scripts
+      - run: ruff check backend scripts/setup-env.py
+      - run: ruff format --check backend scripts/setup-env.py
+      - run: npm run format:check
+      - run: npm run build
+      - run: python backend/manage.py collectstatic --noinput
+      - run: pytest --cov --cov-report=xml --cov-fail-under=90
+      - run: pytest
+        env:
+          APP_MODE: mysql
+      - run: python backend/manage.py spectacular --validate --fail-on-warn --file /tmp/schema.yml
+      - run: python backend/manage.py check --deploy --fail-level WARNING
+        env:
+          DJANGO_DEBUG: "false"
+          DJANGO_SECRET_KEY: ci-only-unique-key-9hAQo5vuiC8KJ4nbY7GokK6ZcU3Xyq3f2bDk3h7B4V
+          DJANGO_SECURE_COOKIES: "true"
+          DJANGO_SSL_REDIRECT: "true"
+          API_DOCS_ENABLED: "false"
+      - run: npm audit --audit-level=high
+      - run: pip-audit -r backend/requirements.txt --no-deps --disable-pip
+      - run: npx --no-install playwright install --with-deps chromium
+      - name: Browser journey
+        run: |
+          python backend/manage.py migrate --noinput
+          python backend/manage.py runserver 127.0.0.1:8002 --noreload > /tmp/nextstep-server.log 2>&1 &
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:8002/api/health/ > /dev/null; then break; fi
+            sleep 1
+          done
+          npm run test:browser
+          npm run test:docs
+        env:
+          BROWSER_CHANNEL: chromium
+      - run: docker build -t nextstep:ci .
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        if: always()
+        with:
+          name: verification-artifacts
+          path: |
+            coverage.xml
+            docs/screenshots/*.png
+          retention-days: 7

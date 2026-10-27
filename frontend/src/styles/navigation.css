@@ -1,0 +1,246 @@
+.workspace-shell {
+  display: grid;
+  grid-template-columns: 222px minmax(0, 1fr);
+  min-height: 100dvh;
+  background: #f9f9f9;
+}
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100dvh;
+  min-height: 650px;
+  padding: 34px 17px 18px;
+  border-right: 1px solid #eaeaea;
+  background: #f6f6f6d9;
+  backdrop-filter: blur(24px);
+  display: flex;
+  flex-direction: column;
+}
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+}
+.sidebar-brand .brand {
+  font-size: 22px;
+}
+.sidebar-brand .brand-mark {
+  width: 26px;
+  height: 28px;
+}
+.sidebar-navigation {
+  margin-top: 46px;
+}
+.nav-section-label {
+  font-size: 10px;
+  color: #68686e;
+  padding-left: 17px;
+  margin-bottom: 12px;
+}
+.sidebar nav {
+  display: grid;
+  gap: 6px;
+}
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 15px;
+  border-radius: 10px;
+  color: #65656e;
+  font-size: 12px;
+}
+.nav-item svg {
+  color: #65656e;
+}
+.nav-item.active {
+  background: #ebebeb;
+  color: #35353b;
+  font-weight: 560;
+  box-shadow: inset 0 0 0 1px #e6e6e66b;
+}
+.nav-item.active svg {
+  color: #65656e;
+}
+.nav-item:hover {
+  background: #eeeeee;
+}
+.nav-counter {
+  margin-left: auto;
+  min-width: 21px;
+  text-align: center;
+  background: #e1e1e1;
+  color: #65656e;
+  border-radius: 5px;
+  padding: 1px 5px;
+  font-size: 9px;
+  font-weight: 500;
+}
+.sidebar-divider {
+  height: 1px;
+  background: #e5e5e5;
+  margin: 25px 15px 22px;
+}
+.stage-nav {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 17px;
+  text-align: left;
+  background: transparent;
+  font-size: 11px;
+  color: #65656e;
+  border-radius: 9px;
+}
+.stage-nav:hover {
+  background: #efefef;
+}
+.stage-nav > span:last-child {
+  margin-left: auto;
+  font-size: 10px;
+  color: #68686e;
+}
+.stage-dot,
+.status-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: #b9b9b9;
+}
+.stage-dot.interview,
+.status-dot.interview {
+  background: #a9a9a9;
+}
+.stage-dot.offer,
+.status-dot.offer {
+  background: #a1a1a1;
+}
+.sidebar-bottom {
+  margin-top: auto;
+}
+.sidebar-message {
+  margin: 30px 15px 27px;
+  padding: 15px 0;
+}
+.sidebar-spark {
+  display: grid;
+  place-items: center;
+  height: 32px;
+  width: 32px;
+  border-radius: 11px;
+  background: linear-gradient(140deg, #f0f0f0, #ededed);
+  box-shadow: inset 0 0 0 1px #fefefe;
+  color: #68686e;
+  margin-bottom: 16px;
+}
+.sidebar-message strong {
+  font-weight: 530;
+  font-size: 14px;
+  letter-spacing: -0.3px;
+  line-height: 1.65;
+  color: #65656e;
+}
+.sidebar-message p {
+  font-size: 10px;
+  color: #68686e;
+  line-height: 1.8;
+  margin: 8px 0 0;
+}
+.user-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  background: transparent;
+  padding: 16px 7px 0;
+  border-top: 1px solid #e7e7e7;
+  text-align: left;
+}
+.user-button > span:nth-child(2) {
+  min-width: 0;
+  display: grid;
+  gap: 3px;
+}
+.user-button strong {
+  font-weight: 550;
+  font-size: 11px;
+  color: #35353b;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 116px;
+}
+.user-button small {
+  font-size: 9px;
+  color: #68686e;
+}
+.user-button > svg {
+  margin-left: auto;
+  color: #68686e;
+}
+.workspace-main {
+  min-width: 0;
+  width: 100%;
+  max-width: 1650px;
+  justify-self: center;
+}
+.workspace-topbar {
+  height: 82px;
+  padding: 0 41px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  border-bottom: 1px solid #ededed;
+  background: #fafafaad;
+  backdrop-filter: blur(16px);
+}
+.breadcrumbs {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 11px;
+  color: #68686e;
+  min-width: 0;
+}
+.breadcrumbs strong {
+  font-weight: 500;
+  color: #65656e;
+}
+.breadcrumbs > svg {
+  color: #68686e;
+}
+.demo-chip {
+  padding: 2px 6px;
+  border: 1px solid #e5e5e5;
+  background: #f6f6f6;
+  font-size: 8px;
+  border-radius: 4px;
+  color: #68686e;
+}
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+.topbar-search {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  background: transparent;
+  color: #68686e;
+  font-size: 10px;
+}
+.topbar-search > kbd {
+  margin-left: 11px;
+}
+.topbar-add {
+  font-size: 11px;
+  padding: 10px 13px;
+  border-radius: 9px;
+}
+.workspace-content {
+  padding: 0 41px;
+}

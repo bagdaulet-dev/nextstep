@@ -1,0 +1,19 @@
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "config.settings"
+pythonpath = ["backend"]
+testpaths = ["backend/tests"]
+addopts = "-ra --strict-markers"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
+
+[tool.coverage.run]
+source = ["backend/accounts", "backend/tracker", "backend/config"]
+omit = ["*/migrations/*", "*/__init__.py", "*/wsgi.py"]
+
+[tool.coverage.report]
+show_missing = true

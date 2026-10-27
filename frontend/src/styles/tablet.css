@@ -1,0 +1,161 @@
+@media (max-width: 800px) {
+  .workspace-shell {
+    display: block;
+  }
+  .sidebar {
+    height: auto;
+    min-height: 0;
+    position: relative;
+    top: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 19px 25px;
+    border-right: 0;
+    border-bottom: 1px solid #e9e9ef;
+    background: #f6f6f9;
+  }
+  .sidebar-brand {
+    padding: 0;
+  }
+  .sidebar-brand .brand {
+    font-size: 24px;
+  }
+  .sidebar-brand .brand-mark {
+    width: 28px;
+    height: 29px;
+  }
+  .mobile-menu-toggle {
+    display: inline-flex;
+  }
+  .sidebar-navigation,
+  .sidebar-bottom {
+    display: none;
+  }
+  .mobile-menu-open .sidebar {
+    flex-wrap: wrap;
+  }
+  .mobile-menu-open .sidebar-navigation {
+    display: block;
+    flex-basis: 100%;
+    margin-top: 23px;
+    padding-bottom: 12px;
+  }
+  .mobile-menu-open .sidebar-bottom {
+    display: block;
+    flex-basis: 100%;
+  }
+  .mobile-menu-open .sidebar-message {
+    display: none;
+  }
+  .mobile-menu-open .sidebar nav {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .mobile-menu-open .nav-item {
+    justify-content: center;
+    padding: 12px 9px;
+    font-size: 12px;
+  }
+  .mobile-menu-open .nav-section-label,
+  .mobile-menu-open .sidebar-divider,
+  .mobile-menu-open .stage-nav {
+    display: none;
+  }
+  .mobile-menu-open .user-button {
+    padding: 14px 3px 0;
+    margin-top: 8px;
+  }
+  .mobile-menu-open .user-button strong {
+    font-size: 12px;
+    max-width: 200px;
+  }
+  .mobile-menu-open .user-button small {
+    font-size: 10px;
+  }
+  .workspace-topbar {
+    height: 69px;
+    padding: 0 28px;
+  }
+  .workspace-content {
+    padding: 0 28px;
+  }
+  .overview-hero {
+    padding: 28px 0 25px;
+    min-height: 275px;
+  }
+  .hero-copy h1 {
+    font-size: 46px;
+  }
+  .hero-copy > p:not(.greeting) {
+    font-size: 12px;
+  }
+  .overview-hero > .orbit-scene {
+    width: 320px;
+    height: 270px;
+  }
+  .greeting {
+    font-size: 10px;
+  }
+  .summary-strip {
+    padding: 24px 0;
+    gap: 17px;
+  }
+  .summary-strip > button > span {
+    font-size: 10px;
+  }
+  .summary-strip > button strong {
+    font-size: 32px;
+  }
+  .summary-strip > button small {
+    font-size: 9px;
+  }
+  .overview-grid {
+    margin-top: 24px;
+  }
+  .view-heading {
+    padding: 34px 0 26px;
+  }
+  .auth-header {
+    height: 86px;
+    padding: 0 30px;
+  }
+  .auth-header > span:last-child {
+    font-size: 9px;
+  }
+  .auth-main {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 25px 30px 45px;
+  }
+  .auth-intro h1 {
+    font-size: 48px;
+    letter-spacing: -2px;
+  }
+  .auth-intro > p {
+    font-size: 12px;
+  }
+  .auth-intro > .orbit-scene {
+    width: 265px;
+    height: 230px;
+    margin-left: -25px;
+  }
+  .auth-card {
+    padding: 26px 23px;
+  }
+  .auth-card-top h2 {
+    font-size: 22px;
+  }
+  .auth-card-top > p {
+    font-size: 11px;
+  }
+  .auth-private {
+    font-size: 8px;
+    line-height: 1.7;
+  }
+  .auth-footer {
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 8px;
+  }
+}
