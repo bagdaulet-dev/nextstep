@@ -1,0 +1,536 @@
+@media (max-width: 600px) {
+  .sidebar {
+    padding: 19px 21px;
+  }
+  .workspace-topbar {
+    height: 63px;
+    padding: 0 21px;
+  }
+  .breadcrumbs {
+    font-size: 10px;
+    gap: 7px;
+  }
+  .demo-chip {
+    font-size: 7px;
+  }
+  .topbar-actions {
+    gap: 12px;
+  }
+  .topbar-search {
+    width: 29px;
+    height: 29px;
+    justify-content: center;
+  }
+  .topbar-search > span,
+  .topbar-search > kbd {
+    display: none;
+  }
+  .topbar-add {
+    font-size: 10px;
+    padding: 9px 11px;
+    gap: 5px;
+    border-radius: 8px;
+  }
+  .topbar-add > svg {
+    width: 13px;
+    height: 13px;
+  }
+  .workspace-content {
+    padding: 0 21px;
+  }
+  .overview-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 27px 0 17px;
+    gap: 2px;
+  }
+  .hero-copy h1 {
+    font-size: 47px;
+    letter-spacing: -2px;
+    line-height: 1.04;
+    margin-bottom: 15px;
+  }
+  .greeting {
+    font-size: 10px;
+    margin-bottom: 18px;
+  }
+  .hero-copy > p:not(.greeting) {
+    font-size: 12px;
+    line-height: 1.8;
+    margin-bottom: 17px;
+  }
+  .hero-button {
+    font-size: 10px;
+    padding: 9px 11px;
+  }
+  .overview-hero > .orbit-scene {
+    width: 100%;
+    max-width: 360px;
+    height: 235px;
+    align-self: center;
+    margin-top: 10px;
+  }
+  .orbit-ring {
+    width: 252px;
+    height: 252px;
+  }
+  .ring-front {
+    width: 215px;
+    height: 215px;
+  }
+  .orbit-core {
+    width: 71px;
+    height: 71px;
+    border-radius: 20px;
+  }
+  .orbit-core svg {
+    height: 36px;
+    width: 36px;
+  }
+  .glass-label-top {
+    right: 0;
+    top: 18px;
+  }
+  .glass-label-bottom {
+    left: -2px;
+    bottom: 26px;
+  }
+  .glass-label strong {
+    font-size: 11px;
+  }
+  .glass-label > div > span {
+    font-size: 8px;
+  }
+  .motion-toggle {
+    bottom: 17px;
+    right: 0;
+  }
+  .summary-strip {
+    grid-template-columns: 1fr 1fr;
+    gap: 21px 17px;
+    padding: 25px 0;
+  }
+  .summary-strip > button {
+    padding: 0 18px 0 0;
+  }
+  .summary-strip > button:nth-child(2) {
+    border-right: 0;
+  }
+  .summary-strip > button > span {
+    font-size: 11px;
+  }
+  .summary-strip > button strong {
+    font-size: 33px;
+    margin: 7px 0 3px;
+  }
+  .summary-strip > button small {
+    font-size: 10px;
+  }
+  .overview-grid {
+    gap: 20px;
+    margin-top: 24px;
+  }
+  .overview-aside {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .panel-heading {
+    padding: 20px 17px 16px;
+  }
+  .panel-heading h2 {
+    font-size: 15px;
+  }
+  .panel-heading p {
+    font-size: 10px;
+  }
+  .panel-heading > .text-button {
+    font-size: 10px;
+  }
+  .application-table .date-column,
+  .recent-panel .application-table .location-column,
+  .recent-panel .application-table th:nth-child(3) {
+    display: none;
+  }
+  .application-table th:first-child,
+  .recent-panel .application-table th:first-child,
+  .collection-panel .application-table th:first-child {
+    width: 58%;
+  }
+  .application-table th:nth-child(2),
+  .recent-panel .application-table th:nth-child(2),
+  .collection-panel .application-table th:nth-child(2) {
+    width: 31%;
+  }
+  .application-table th:last-child,
+  .recent-panel .application-table th:last-child,
+  .collection-panel .application-table th:last-child {
+    width: 11%;
+  }
+  .application-table th:first-child,
+  .application-table td:first-child {
+    padding-left: 15px;
+  }
+  .application-table th {
+    font-size: 9px;
+    padding-bottom: 13px;
+  }
+  .application-table td {
+    padding: 16px 0;
+  }
+  .application-table td:last-child {
+    padding-right: 8px;
+  }
+  .company-cell {
+    gap: 8px;
+  }
+  .company-cell strong,
+  .collection-panel .company-cell strong {
+    font-size: 12px;
+  }
+  .company-cell small,
+  .collection-panel .company-cell small {
+    font-size: 9px;
+    max-width: 142px;
+  }
+  .company-mark {
+    height: 29px;
+    width: 29px;
+    border-radius: 8px;
+    font-size: 12px;
+  }
+  .status-select-wrap {
+    padding-left: 6px;
+  }
+  .status-select-wrap select,
+  .collection-panel .status-select-wrap select {
+    font-size: 9px;
+    padding-right: 6px;
+  }
+  .row-open {
+    width: 21px;
+    height: 26px;
+  }
+  .row-open > svg {
+    width: 12px;
+    height: 12px;
+  }
+  .add-row {
+    padding: 13px;
+    font-size: 10px;
+  }
+  .followup-panel .panel-heading h2,
+  .activity-panel .panel-heading h2 {
+    font-size: 14px;
+  }
+  .followup-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 0 12px;
+    padding-bottom: 15px;
+  }
+  .followup-list strong {
+    font-size: 11px;
+  }
+  .followup-list small {
+    font-size: 9px;
+  }
+  .followup-list .company-mark {
+    width: 26px;
+    height: 26px;
+    font-size: 11px;
+  }
+  .followup-list > button > svg {
+    display: none;
+  }
+  .activity-chart.compact {
+    height: 105px;
+    padding: 12px 18px 0;
+    max-width: 350px;
+    overflow: hidden;
+  }
+  .activity-chart.compact > svg {
+    max-height: 100px;
+  }
+  .activity-panel > p {
+    font-size: 10px;
+    padding-bottom: 19px;
+  }
+  .activity-panel .panel-heading > span {
+    font-size: 9px;
+  }
+  .workspace-footer {
+    margin-top: 24px;
+    padding: 21px 0;
+    align-items: start;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 9px;
+  }
+  .view-heading {
+    padding: 31px 0 25px;
+    align-items: start;
+    gap: 10px;
+  }
+  .view-heading h1 {
+    font-size: 34px;
+    letter-spacing: -1.3px;
+  }
+  .page-eyebrow {
+    font-size: 9px;
+    margin-bottom: 13px;
+  }
+  .view-heading > div > p:last-child {
+    font-size: 11px;
+    line-height: 1.7;
+  }
+  .collection-count {
+    font-size: 8px;
+    padding: 5px 7px;
+    white-space: nowrap;
+    margin-top: 34px;
+  }
+  .application-filter-tabs {
+    gap: 16px;
+    margin-bottom: 19px;
+  }
+  .application-filter-tabs > button {
+    font-size: 10px;
+    gap: 5px;
+    padding-bottom: 12px;
+  }
+  .application-filter-tabs > button > span {
+    font-size: 8px;
+    padding: 0 4px;
+  }
+  .collection-toolbar {
+    padding: 14px 13px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .search-field {
+    flex-basis: 100%;
+    padding: 10px;
+  }
+  .search-field input {
+    font-size: 12px;
+  }
+  .toolbar-select {
+    flex: 1;
+    gap: 6px;
+    padding: 0 1px;
+  }
+  .toolbar-select > select,
+  .sort-select {
+    font-size: 10px;
+    max-width: 140px;
+  }
+  .collection-panel .application-table td {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .pagination {
+    padding: 12px 13px;
+    font-size: 9px;
+  }
+  .pagination > div {
+    gap: 6px;
+  }
+  .pagination .icon-button {
+    width: 22px;
+    height: 22px;
+  }
+  .insights-symbol {
+    height: 43px;
+    width: 43px;
+    border-radius: 13px;
+    margin-top: 22px;
+  }
+  .insights-symbol > svg {
+    width: 22px;
+    height: 22px;
+  }
+  .insight-summary {
+    padding: 23px 0;
+    gap: 17px;
+    margin-bottom: 22px;
+  }
+  .insight-summary span {
+    font-size: 10px;
+    line-height: 1.7;
+    display: block;
+    max-width: 90px;
+  }
+  .insight-summary strong {
+    font-size: 29px;
+    margin-top: 7px;
+  }
+  .insights-grid {
+    gap: 20px;
+  }
+  .insight-panel .panel-heading p {
+    font-size: 10px;
+  }
+  .insight-panel .activity-chart {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .chart-label {
+    font-size: 11px;
+  }
+  .distribution {
+    padding-top: 18px;
+  }
+  .insight-footnote {
+    font-size: 10px;
+    line-height: 1.8;
+  }
+  .dialog {
+    padding: 24px 21px;
+    width: calc(100% - 24px);
+    border-radius: 19px;
+    max-height: calc(100dvh - 24px);
+  }
+  .dialog-heading h2 {
+    font-size: 23px;
+  }
+  .dialog-subtitle {
+    font-size: 11px;
+    margin-bottom: 22px;
+  }
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .form-wide {
+    grid-column: auto;
+  }
+  .dialog label {
+    font-size: 12px;
+  }
+  .dialog input,
+  .dialog select,
+  .dialog textarea {
+    font-size: 16px;
+    padding: 10px 12px;
+  }
+  .dialog label > span {
+    font-size: 10px;
+  }
+  .dialog-actions {
+    gap: 8px;
+    margin-top: 23px;
+    padding-top: 19px;
+  }
+  .dialog-actions .button {
+    font-size: 11px;
+    padding: 10px 12px;
+  }
+  .details-drawer {
+    width: 100%;
+    max-height: 100dvh;
+    height: 100dvh;
+    max-width: 100%;
+    border-radius: 0;
+    inset: 0;
+    padding: 23px;
+  }
+  .details-drawer .dialog-heading h2 {
+    font-size: 12px;
+  }
+  .detail-identity h3 {
+    font-size: 28px;
+  }
+  .detail-dates strong {
+    font-size: 12px;
+  }
+  .detail-note p {
+    font-size: 13px;
+  }
+  .drawer-footer {
+    padding-top: 18px;
+  }
+  .toast {
+    font-size: 11px;
+    bottom: 19px;
+    padding: 12px 13px;
+    max-width: calc(100% - 24px);
+    gap: 8px;
+  }
+  .toast > .icon-button {
+    margin-left: 4px;
+  }
+  .auth-header {
+    height: 79px;
+    padding: 0 24px;
+  }
+  .auth-header .brand {
+    font-size: 23px;
+  }
+  .auth-header > span:last-child {
+    display: none;
+  }
+  .auth-main {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 16px 24px 35px;
+    max-width: 470px;
+  }
+  .auth-intro h1 {
+    font-size: 45px;
+    letter-spacing: -2px;
+    margin: 0 0 17px;
+  }
+  .subtle-kicker {
+    font-size: 10px;
+    margin-bottom: 20px;
+  }
+  .auth-intro > p {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+  .auth-intro > .orbit-scene {
+    display: none;
+  }
+  .auth-private {
+    display: none;
+  }
+  .auth-card {
+    max-width: none;
+    padding: 27px 24px;
+  }
+  .auth-card-symbol {
+    height: 37px;
+    width: 37px;
+    border-radius: 11px;
+    margin-bottom: 19px;
+  }
+  .auth-card-top h2 {
+    font-size: 24px;
+  }
+  .auth-card-top > p {
+    font-size: 11px;
+  }
+  .auth-card label {
+    font-size: 11px;
+  }
+  .auth-card input {
+    font-size: 16px;
+    padding: 12px;
+  }
+  .auth-switch {
+    font-size: 11px;
+  }
+  .auth-footer {
+    flex-direction: column;
+    gap: 7px;
+    padding: 15px 24px 28px;
+    font-size: 9px;
+    max-width: 470px;
+  }
+  .auth-footer > span:last-child {
+    font-size: 8px;
+  }
+  .desktop-only {
+    display: none;
+  }
+}
