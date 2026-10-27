@@ -1,0 +1,359 @@
+@media (min-width: 1600px) {
+  .workspace-content {
+    padding: 0 65px;
+  }
+  .workspace-topbar {
+    padding: 0 65px;
+  }
+  .overview-hero {
+    padding: 43px 0 35px;
+  }
+  .hero-copy h1 {
+    font-size: 59px;
+  }
+  .overview-hero > .orbit-scene {
+    width: 460px;
+    height: 300px;
+  }
+  .orbit-ring {
+    width: 310px;
+    height: 310px;
+  }
+  .application-table td {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .overview-grid {
+    gap: 30px;
+  }
+  .summary-strip {
+    padding: 29px 0;
+  }
+  .summary-strip > button strong {
+    font-size: 40px;
+  }
+}
+@media (max-width: 1230px) {
+  .workspace-shell {
+    grid-template-columns: 195px minmax(0, 1fr);
+  }
+  .sidebar {
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+  .sidebar-brand {
+    padding-left: 12px;
+  }
+  .sidebar-brand .brand {
+    font-size: 20px;
+  }
+  .sidebar-brand .brand-mark {
+    width: 25px;
+    height: 27px;
+  }
+  .nav-item {
+    padding: 12px;
+    gap: 10px;
+  }
+  .stage-nav {
+    padding-left: 13px;
+    padding-right: 10px;
+    font-size: 11px;
+  }
+  .sidebar-message {
+    margin-left: 13px;
+  }
+  .workspace-content {
+    padding: 0 29px;
+  }
+  .workspace-topbar {
+    padding: 0 29px;
+  }
+  .overview-hero {
+    padding-top: 29px;
+    min-height: 292px;
+    gap: 5px;
+  }
+  .hero-copy h1 {
+    font-size: 45px;
+    letter-spacing: -1.8px;
+  }
+  .overview-hero > .orbit-scene {
+    width: 350px;
+    height: 270px;
+  }
+  .orbit-ring {
+    width: 245px;
+    height: 245px;
+  }
+  .ring-front {
+    width: 215px;
+    height: 215px;
+  }
+  .glass-label-top {
+    right: -3px;
+    top: 35px;
+  }
+  .glass-label-bottom {
+    bottom: 35px;
+    left: -5px;
+  }
+  .glass-label {
+    padding: 8px 10px;
+    gap: 7px;
+  }
+  .glass-label strong {
+    font-size: 11px;
+  }
+  .glass-label > div > span {
+    font-size: 8px;
+  }
+  .mini-icon {
+    height: 26px;
+    width: 26px;
+  }
+  .overview-grid {
+    grid-template-columns: minmax(0, 1fr) 235px;
+    gap: 18px;
+  }
+  .panel-heading {
+    padding: 19px 17px 13px;
+  }
+  .application-table th:first-child,
+  .application-table td:first-child {
+    padding-left: 17px;
+  }
+  .application-table th:first-child {
+    width: 47%;
+  }
+  .application-table th:nth-child(2) {
+    width: 26%;
+  }
+  .application-table th:nth-child(4) {
+    width: 19%;
+  }
+  .application-table th:last-child {
+    width: 8%;
+  }
+  .application-table .date-text {
+    font-size: 10px;
+  }
+  .company-cell {
+    gap: 9px;
+  }
+  .company-cell strong {
+    font-size: 12px;
+  }
+  .company-cell small {
+    font-size: 10px;
+  }
+  .company-mark {
+    width: 29px;
+    height: 29px;
+    border-radius: 8px;
+  }
+  .status-select-wrap select {
+    font-size: 9px;
+  }
+  .summary-strip {
+    gap: 15px;
+  }
+  .summary-strip > button {
+    padding-right: 13px;
+  }
+  .summary-strip > button > span {
+    font-size: 10px;
+  }
+  .summary-strip > button small {
+    font-size: 9px;
+  }
+  .collection-toolbar {
+    gap: 10px;
+    padding: 15px;
+  }
+  .collection-toolbar input {
+    font-size: 11px;
+  }
+  .toolbar-select > select,
+  .sort-select {
+    font-size: 10px;
+  }
+  .collection-panel .location-text {
+    max-width: 120px;
+  }
+  .auth-main {
+    gap: 70px;
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+  .auth-intro h1 {
+    font-size: 59px;
+  }
+  .auth-card {
+    padding: 30px;
+  }
+}
+@media (max-width: 1050px) {
+  .workspace-shell {
+    grid-template-columns: 185px minmax(0, 1fr);
+  }
+  .sidebar {
+    padding-left: 11px;
+    padding-right: 11px;
+  }
+  .nav-item {
+    font-size: 12px;
+    gap: 8px;
+  }
+  .nav-section-label {
+    font-size: 9px;
+  }
+  .stage-nav {
+    font-size: 10px;
+    gap: 8px;
+  }
+  .sidebar-brand .brand {
+    font-size: 19px;
+  }
+  .sidebar-brand .brand-mark {
+    width: 24px;
+    height: 26px;
+  }
+  .sidebar-message strong {
+    font-size: 13px;
+  }
+  .user-button {
+    padding-left: 3px;
+    gap: 8px;
+  }
+  .user-button strong {
+    font-size: 10px;
+    max-width: 102px;
+  }
+  .user-button small {
+    font-size: 8px;
+  }
+  .workspace-content {
+    padding: 0 24px;
+  }
+  .workspace-topbar {
+    padding: 0 24px;
+  }
+  .topbar-actions {
+    gap: 17px;
+  }
+  .overview-hero > .orbit-scene {
+    width: 310px;
+    height: 260px;
+  }
+  .hero-copy h1 {
+    font-size: 40px;
+  }
+  .hero-copy > p:not(.greeting) {
+    font-size: 11px;
+  }
+  .greeting {
+    font-size: 10px;
+    gap: 6px;
+  }
+  .overview-grid {
+    grid-template-columns: 1fr;
+  }
+  .overview-aside {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .followup-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 15px;
+  }
+  .followup-list > button:nth-last-child(-n + 2) {
+    border-bottom: 0;
+  }
+  .activity-chart.compact {
+    max-width: 320px;
+    margin: auto;
+  }
+  .recent-panel .application-table th:nth-child(3),
+  .recent-panel .location-column {
+    display: table-cell;
+    width: 22%;
+  }
+  .recent-panel .application-table th:first-child {
+    width: 38%;
+  }
+  .recent-panel .application-table th:nth-child(2) {
+    width: 20%;
+  }
+  .recent-panel .application-table th:nth-child(4) {
+    width: 15%;
+  }
+  .recent-panel .application-table th:last-child {
+    width: 5%;
+  }
+  .application-table td {
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+  .company-cell strong {
+    font-size: 13px;
+  }
+  .company-cell small {
+    font-size: 11px;
+  }
+  .status-select-wrap select {
+    font-size: 10px;
+  }
+  .location-text {
+    font-size: 10px;
+    max-width: 135px;
+  }
+  .summary-strip > button strong {
+    font-size: 31px;
+  }
+  .summary-strip > button small {
+    font-size: 8px;
+  }
+  .collection-panel .location-column {
+    display: none;
+  }
+  .collection-panel .application-table th:first-child {
+    width: 47%;
+  }
+  .collection-panel .application-table th:nth-child(2) {
+    width: 24%;
+  }
+  .collection-panel .application-table th:nth-child(4) {
+    width: 20%;
+  }
+  .collection-panel .application-table th:last-child {
+    width: 9%;
+  }
+  .collection-toolbar .search-field kbd {
+    display: none;
+  }
+  .insights-grid {
+    grid-template-columns: 1fr;
+  }
+  .auth-main {
+    gap: 40px;
+  }
+  .auth-intro h1 {
+    font-size: 55px;
+  }
+  .auth-intro > .orbit-scene {
+    width: 310px;
+  }
+  .auth-card {
+    padding: 27px;
+  }
+  .auth-header {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .auth-footer {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
